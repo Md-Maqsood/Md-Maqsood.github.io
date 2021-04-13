@@ -27,7 +27,7 @@ function readSudoku(){
 
 const getSudokuSolutionFromServer=(sudoku)=>{
     let sol='';
-    server_url="http://localhost:8000/solve/"+"?sudoku="+sudoku;
+    server_url="https://mqsd-sudoku.herokuapp.com/solve/"+"?sudoku="+sudoku;
     makeServiceCall("GET",server_url,true)
         .then(responseText=>{
             sol_response=JSON.parse(responseText);
