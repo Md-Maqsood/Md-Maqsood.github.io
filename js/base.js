@@ -27,20 +27,22 @@ function readSudoku(){
 
 const getSudokuSolutionFromServer=(sudoku)=>{
     let sol='';
+    let dttm=''
     server_url="https://mqsd-sudoku.herokuapp.com/solve/"+"?sudoku="+sudoku;
     makeServiceCall("GET",server_url,true)
         .then(responseText=>{
             sol_response=JSON.parse(responseText);
             sol=sol_response.solution;
-            writeTheSolution(sudoku, sol);
+	    dttm=sol_response.datetime;
+            writeTheSolution(sudoku, sol, dttm);
         }).catch(error=>{
             console.log("GET error :"+error);
             sol='';
-            writeTheSolution(sudoku, sol);
+            writeTheSolution(sudoku, sol, dttm);
         });
 }
 
-function writeTheSolution(sudoku, solution){   
+function writeTheSolution(sudoku, solution, dattm){   
     if(solution=='x'){
         alert("The sudoku has no solution or has multiple solutions!")
     }
@@ -54,6 +56,7 @@ function writeTheSolution(sudoku, solution){
             }
         }
     }
+    document.getElementById('datetime').innerHTML = dattm;
 }
 
 
