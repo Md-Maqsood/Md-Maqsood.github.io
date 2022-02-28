@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<style>
+    	body {
+    		background-image: url("./assets/background_image.jpg");
+    		background-repeat: no-repeat;
+  			background-attachment: fixed;
+  			background-size: 100% 100%;
+  			font-family: Georgia;
+			}
+	</style>
+</head>
+
+<body style='padding: 50px'>
+<div class="row" style="text-align: center;">
+
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="margin: auto;">
+<button id="add" class="btn btn-primary btn-sm btn-block" onClick='addTask()'>Add Task</button>
+</div>
+
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<button id="mark" class="btn btn-success btn-sm btn-block" style="margin: auto;" onClick='markTask()'>Mark Task</button>
+</div>
+
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<button id="get-tasks" class="btn btn-warning btn-sm btn-block" style="margin: auto;" onClick='getTasks()'>Get Tasks</button>
+</div>
+
+</div><br>
+
+<div class="row" style="text-align: center;">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin: auto;">
+<input id='data' name='data' type='text' placeholder='		DATA		'>
+<input id='pin' name='pin' type='text' placeholder='		PIN			'>
+</div>
+</div><br>
+
+<div class="row">
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="margin: auto;">
+<ol id='task-list'></ol>
+</div>
+</div><br>
+
+<div class="row" style="text-align: center;">
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id='message' style="margin: auto;">
+</div>
+</div>
+
+<script src="./js/service.js"></script>
+<script src="./js/base.js"></script>
+
+</body>
+</html>
