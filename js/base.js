@@ -56,7 +56,7 @@ function displayMessage(message){
 function displayTasks(taskList){
 	let taskListHtml='';
 	for(let task of taskList){
-		taskListHtml=`${taskListHtml}<li>${task}</li>`;
+		taskListHtml=`${taskListHtml}<li class='list-group-item'>${task}</li>`;
 	}
 	taskListHtml=`${taskListHtml}<br>
 	<div class="row">
