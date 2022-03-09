@@ -1,14 +1,14 @@
-server_url="https://maqsood.pythonanywhere.com/"
+server_url="https://maqsood.pythonanywhere.com/records/"
 function addTask(){
 	let taskName=document.getElementById('data').value
 	let pin=document.getElementById('pin').value
-	let url=server_url+"add/"
+	let url=server_url+"addTask/"
 	addMarkTaskToServer(url,taskName,pin)
 }
 
 function markTask(){
 	let taskName=document.getElementById('data').value
-	let url=server_url+"mark/"
+	let url=server_url+"markTask/"
 	let pin=document.getElementById('pin').value
 	addMarkTaskToServer(url,taskName,pin)
 }
