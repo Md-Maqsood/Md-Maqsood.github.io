@@ -1,4 +1,4 @@
-server_url="https://mqsd-sudoku.herokuapp.com/"
+server_url="https://maqsood.pythonanywhere.com/"
 function addTask(){
 	let taskName=document.getElementById('data').value
 	let pin=document.getElementById('pin').value
